@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1f3a">
+  <meta name="description" content="PulseChain AI - forecast disease surges and medicine shortages for rural clinics. Simulated demo data.">
+  <title>PulseChain AI</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#/">
+        <img src="/icons/icon.svg" alt="" width="34" height="34">
+        <span><strong>PulseChain</strong> AI<small>Clinic supply forecasting</small></span>
+      </a>
+      <nav id="nav">
+        <a href="#/" data-route="dashboard"><i>&#9632;</i>Dashboard</a>
+        <a href="#/clinics" data-route="clinics"><i>&#9679;</i>Clinics</a>
+        <a href="#/forecast" data-route="forecast"><i>&#9650;</i>Forecasting</a>
+        <a href="#/inventory" data-route="inventory"><i>&#9644;</i>Inventory</a>
+        <a href="#/redistribution" data-route="redistribution"><i>&#8644;</i>Redistribution</a>
+        <a href="#/alerts" data-route="alerts"><i>&#9993;</i>Alerts &amp; SMS<span class="nav-count" id="nav-alerts" hidden></span></a>
+        <a href="#/demo" data-route="demo" class="nav-demo"><i>&#9654;</i>Monsoon demo</a>
+      </nav>
+      <div class="sidebar-foot">
+        <span class="sim-badge">SIMULATED DATA</span>
+        <p>All clinics, cases and stock levels are synthetic. Nothing here is a real epidemiological forecast.</p>
+      </div>
+    </aside>
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+        <h1 id="page-title">Dashboard</h1>
+        <div class="spacer"></div>
+        <span class="chip" id="scenario-chip" hidden></span>
+        <span class="chip chip-queue" id="queue-chip" hidden></span>
+        <span class="chip chip-net" id="net-chip" role="status" aria-live="polite"><i></i><span id="net-text">Checking...</span></span>
+      </header>
+      <div class="banner" id="banner" role="note"></div>
+      <main id="view" tabindex="-1"></main>
+    </div>
+  </div>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <script type="module" src="/js/main.js"></script>
+  <noscript>PulseChain AI needs JavaScript.</noscript>
+</body>
+</html>

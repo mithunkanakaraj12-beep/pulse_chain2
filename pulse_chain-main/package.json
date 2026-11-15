@@ -1,0 +1,16 @@
+{
+  "name": "pulsechain-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PulseChain AI - offline-friendly healthcare supply chain forecasting. The frontend is a zero-dependency, no-build PWA served by the Flask backend.",
+  "scripts": {
+    "setup": "pip install -r requirements.txt",
+    "reset-demo": "cd backend && python -m pulsechain.cli reset --train",
+    "train": "cd backend && python -m pulsechain.cli train",
+    "start": "cd backend && python -m pulsechain.cli serve",
+    "test": "cd backend && python -m pytest -q",
+    "e2e": "python scripts/e2e_check.py"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
