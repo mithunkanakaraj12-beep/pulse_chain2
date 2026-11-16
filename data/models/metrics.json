@@ -1,0 +1,444 @@
+{
+  "trained_at": "2026-11-16T01:27:01+00:00",
+  "as_of": "2026-05-18",
+  "seed": 42,
+  "feature_names": [
+    "horizon_weeks",
+    "cases_last_week",
+    "cases_prev_week",
+    "cases_4wk_avg",
+    "rain_lag1_2wk",
+    "rain_lag2_5wk",
+    "rain_prev_8wk",
+    "temp_recent",
+    "season_sin",
+    "season_cos",
+    "log_catchment_pop"
+  ],
+  "algorithm": "HistGradientBoostingRegressor (mean + 10th/90th percentile quantile models)",
+  "data_label": "SIMULATED DATA - illustrative demo dataset, not real epidemiological or inventory data",
+  "metrics": {
+    "diseases": {
+      "malaria": {
+        "rows_train": 18768,
+        "rows_holdout": 4992,
+        "mean_weekly_cases_holdout": 8.576923076923077,
+        "mae_model": 3.4628599591148634,
+        "mae_seasonal_naive": 4.1826923076923075,
+        "mae_persistence": 5.64823717948718,
+        "skill_vs_seasonal_naive": 0.172097848855297,
+        "skill_vs_persistence": 0.38691314669097043,
+        "interval_coverage_80_raw": 0.6586538461538461,
+        "interval_scale": 1.4,
+        "interval_coverage_80": 0.8064903846153846,
+        "interval_mean_width": 6.934283438806186,
+        "per_horizon_mae": {
+          "1": {
+            "model": 3.4034365016210164,
+            "seasonal_naive": 4.1826923076923075,
+            "persistence": 3.8253205128205128
+          },
+          "2": {
+            "model": 3.4561144719888217,
+            "seasonal_naive": 4.1826923076923075,
+            "persistence": 4.833333333333333
+          },
+          "3": {
+            "model": 3.4744384603653393,
+            "seasonal_naive": 4.1826923076923075,
+            "persistence": 5.387820512820513
+          },
+          "4": {
+            "model": 3.4775695975870056,
+            "seasonal_naive": 4.1826923076923075,
+            "persistence": 5.657051282051282
+          },
+          "5": {
+            "model": 3.480855069280051,
+            "seasonal_naive": 4.1826923076923075,
+            "persistence": 5.863782051282051
+          },
+          "6": {
+            "model": 3.464706760351136,
+            "seasonal_naive": 4.1826923076923075,
+            "persistence": 6.1506410256410255
+          },
+          "7": {
+            "model": 3.4683961387760056,
+            "seasonal_naive": 4.1826923076923075,
+            "persistence": 6.511217948717949
+          },
+          "8": {
+            "model": 3.477362672949531,
+            "seasonal_naive": 4.1826923076923075,
+            "persistence": 6.956730769230769
+          }
+        }
+      },
+      "cholera": {
+        "rows_train": 18768,
+        "rows_holdout": 4992,
+        "mean_weekly_cases_holdout": 2.8669871794871793,
+        "mae_model": 1.4626495870708411,
+        "mae_seasonal_naive": 2.6462339743589745,
+        "mae_persistence": 3.2481971153846154,
+        "skill_vs_seasonal_naive": 0.44727125369737786,
+        "skill_vs_persistence": 0.549704178929532,
+        "interval_coverage_80_raw": 0.8735977564102564,
+        "interval_scale": 1.0,
+        "interval_coverage_80": 0.8653846153846154,
+        "interval_mean_width": 0.6169571513581791,
+        "per_horizon_mae": {
+          "1": {
+            "model": 1.428395255836196,
+            "seasonal_naive": 2.6462339743589745,
+            "persistence": 1.8429487179487178
+          },
+          "2": {
+            "model": 1.4715211728253632,
+            "seasonal_naive": 2.6462339743589745,
+            "persistence": 2.735576923076923
+          },
+          "3": {
+            "model": 1.4676839043243295,
+            "seasonal_naive": 2.6462339743589745,
+            "persistence": 2.9615384615384617
+          },
+          "4": {
+            "model": 1.472752815212732,
+            "seasonal_naive": 2.6462339743589745,
+            "persistence": 3.253205128205128
+          },
+          "5": {
+            "model": 1.479740233066022,
+            "seasonal_naive": 2.6462339743589745,
+            "persistence": 3.519230769230769
+          },
+          "6": {
+            "model": 1.4686578889790698,
+            "seasonal_naive": 2.6462339743589745,
+            "persistence": 3.75
+          },
+          "7": {
+            "model": 1.4593786681567504,
+            "seasonal_naive": 2.6462339743589745,
+            "persistence": 3.9278846153846154
+          },
+          "8": {
+            "model": 1.453066758166266,
+            "seasonal_naive": 2.6462339743589745,
+            "persistence": 3.9951923076923075
+          }
+        }
+      },
+      "pneumonia": {
+        "rows_train": 18768,
+        "rows_holdout": 4992,
+        "mean_weekly_cases_holdout": 11.120192307692308,
+        "mae_model": 4.630291014341528,
+        "mae_seasonal_naive": 5.119791666666667,
+        "mae_persistence": 6.0186298076923075,
+        "skill_vs_seasonal_naive": 0.09560948651721946,
+        "skill_vs_persistence": 0.23067356486627033,
+        "interval_coverage_80_raw": 0.6678685897435898,
+        "interval_scale": 1.3,
+        "interval_coverage_80": 0.7668269230769231,
+        "interval_mean_width": 12.945486510148827,
+        "per_horizon_mae": {
+          "1": {
+            "model": 4.344094359217572,
+            "seasonal_naive": 5.119791666666667,
+            "persistence": 4.5576923076923075
+          },
+          "2": {
+            "model": 4.624781912196845,
+            "seasonal_naive": 5.119791666666667,
+            "persistence": 5.689102564102564
+          },
+          "3": {
+            "model": 4.6459955059467575,
+            "seasonal_naive": 5.119791666666667,
+            "persistence": 6.112179487179487
+          },
+          "4": {
+            "model": 4.649430202352639,
+            "seasonal_naive": 5.119791666666667,
+            "persistence": 6.30448717948718
+          },
+          "5": {
+            "model": 4.680156698703751,
+            "seasonal_naive": 5.119791666666667,
+            "persistence": 6.282051282051282
+          },
+          "6": {
+            "model": 4.683909433026959,
+            "seasonal_naive": 5.119791666666667,
+            "persistence": 6.200320512820513
+          },
+          "7": {
+            "model": 4.710672304100915,
+            "seasonal_naive": 5.119791666666667,
+            "persistence": 6.434294871794871
+          },
+          "8": {
+            "model": 4.70328769918678,
+            "seasonal_naive": 5.119791666666667,
+            "persistence": 6.568910256410256
+          }
+        }
+      }
+    },
+    "holdout_weeks": 52
+  },
+  "importance": {
+    "malaria": {
+      "groups": [
+        {
+          "group": "Rainfall",
+          "share": 0.7198440120660945
+        },
+        {
+          "group": "Temperature",
+          "share": 0.23587919980581287
+        },
+        {
+          "group": "Season",
+          "share": 0.02737043766592866
+        },
+        {
+          "group": "Horizon & population",
+          "share": 0.01379560380003155
+        },
+        {
+          "group": "Recent cases",
+          "share": 0.0031107466621323196
+        }
+      ],
+      "features": [
+        {
+          "feature": "rain_lag2_5wk",
+          "label": "Rainfall 2-5 weeks earlier",
+          "share": 0.6763794068123754
+        },
+        {
+          "feature": "temp_recent",
+          "label": "Recent temperature",
+          "share": 0.23587919980581287
+        },
+        {
+          "feature": "rain_prev_8wk",
+          "label": "Cumulative rainfall, prior 8 weeks",
+          "share": 0.03215391478049448
+        },
+        {
+          "feature": "season_cos",
+          "label": "Season (cos)",
+          "share": 0.021765123911867534
+        },
+        {
+          "feature": "log_catchment_pop",
+          "label": "Catchment population",
+          "share": 0.013609119926155355
+        },
+        {
+          "feature": "rain_lag1_2wk",
+          "label": "Rainfall 1-2 weeks earlier",
+          "share": 0.011310690473224702
+        },
+        {
+          "feature": "season_sin",
+          "label": "Season (sin)",
+          "share": 0.005605313754061126
+        },
+        {
+          "feature": "cases_last_week",
+          "label": "Cases last week",
+          "share": 0.001983826748691439
+        },
+        {
+          "feature": "cases_prev_week",
+          "label": "Cases the week before",
+          "share": 0.001126919913440881
+        },
+        {
+          "feature": "horizon_weeks",
+          "label": "Forecast horizon",
+          "share": 0.00018648387387619697
+        },
+        {
+          "feature": "cases_4wk_avg",
+          "label": "Average cases, last 4 weeks",
+          "share": 0.0
+        }
+      ]
+    },
+    "cholera": {
+      "groups": [
+        {
+          "group": "Rainfall",
+          "share": 0.928063575892185
+        },
+        {
+          "group": "Season",
+          "share": 0.03098500038841075
+        },
+        {
+          "group": "Horizon & population",
+          "share": 0.01639342506216073
+        },
+        {
+          "group": "Temperature",
+          "share": 0.014561699218221775
+        },
+        {
+          "group": "Recent cases",
+          "share": 0.009996299439021677
+        }
+      ],
+      "features": [
+        {
+          "feature": "rain_lag1_2wk",
+          "label": "Rainfall 1-2 weeks earlier",
+          "share": 0.59146556034079
+        },
+        {
+          "feature": "rain_lag2_5wk",
+          "label": "Rainfall 2-5 weeks earlier",
+          "share": 0.2940282666341066
+        },
+        {
+          "feature": "rain_prev_8wk",
+          "label": "Cumulative rainfall, prior 8 weeks",
+          "share": 0.04256974891728842
+        },
+        {
+          "feature": "season_sin",
+          "label": "Season (sin)",
+          "share": 0.02230366479679864
+        },
+        {
+          "feature": "log_catchment_pop",
+          "label": "Catchment population",
+          "share": 0.015387466440321736
+        },
+        {
+          "feature": "temp_recent",
+          "label": "Recent temperature",
+          "share": 0.014561699218221775
+        },
+        {
+          "feature": "season_cos",
+          "label": "Season (cos)",
+          "share": 0.00868133559161211
+        },
+        {
+          "feature": "cases_last_week",
+          "label": "Cases last week",
+          "share": 0.005625401653228998
+        },
+        {
+          "feature": "cases_4wk_avg",
+          "label": "Average cases, last 4 weeks",
+          "share": 0.0043708977857926795
+        },
+        {
+          "feature": "horizon_weeks",
+          "label": "Forecast horizon",
+          "share": 0.001005958621838994
+        },
+        {
+          "feature": "cases_prev_week",
+          "label": "Cases the week before",
+          "share": 0.0
+        }
+      ]
+    },
+    "pneumonia": {
+      "groups": [
+        {
+          "group": "Temperature",
+          "share": 0.6501694793195651
+        },
+        {
+          "group": "Horizon & population",
+          "share": 0.167484405419415
+        },
+        {
+          "group": "Rainfall",
+          "share": 0.11242188915257391
+        },
+        {
+          "group": "Recent cases",
+          "share": 0.048505908888978114
+        },
+        {
+          "group": "Season",
+          "share": 0.021418317219467808
+        }
+      ],
+      "features": [
+        {
+          "feature": "temp_recent",
+          "label": "Recent temperature",
+          "share": 0.6501694793195651
+        },
+        {
+          "feature": "log_catchment_pop",
+          "label": "Catchment population",
+          "share": 0.15141576815241
+        },
+        {
+          "feature": "rain_prev_8wk",
+          "label": "Cumulative rainfall, prior 8 weeks",
+          "share": 0.05350933819766167
+        },
+        {
+          "feature": "rain_lag1_2wk",
+          "label": "Rainfall 1-2 weeks earlier",
+          "share": 0.03345421067032248
+        },
+        {
+          "feature": "cases_last_week",
+          "label": "Cases last week",
+          "share": 0.031250607664029
+        },
+        {
+          "feature": "rain_lag2_5wk",
+          "label": "Rainfall 2-5 weeks earlier",
+          "share": 0.02545834028458975
+        },
+        {
+          "feature": "season_cos",
+          "label": "Season (cos)",
+          "share": 0.021418317219467808
+        },
+        {
+          "feature": "cases_4wk_avg",
+          "label": "Average cases, last 4 weeks",
+          "share": 0.017255301224949122
+        },
+        {
+          "feature": "horizon_weeks",
+          "label": "Forecast horizon",
+          "share": 0.016068637267004974
+        },
+        {
+          "feature": "cases_prev_week",
+          "label": "Cases the week before",
+          "share": 0.0
+        },
+        {
+          "feature": "season_sin",
+          "label": "Season (sin)",
+          "share": 0.0
+        }
+      ]
+    }
+  },
+  "notes": [
+    "Prediction bands are the raw 10th-90th percentile models widened by a factor calibrated on the first half of the holdout year; coverage is reported on the second half.",
+    "Trained on SIMULATED data; metrics describe the method on this synthetic dataset only.",
+    "Training uses observed weather; at forecast time future weather is an outlook (climatology or scenario).",
+    "Holdout = targets in the final 52 weeks; reported models are refit on all data for deployment."
+  ]
+}
